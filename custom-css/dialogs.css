@@ -1,0 +1,9 @@
+#place-comment .dialog {
+    height: 94%;
+    width: 92%;
+}
+
+#place-comment .dialog .dialog-container {
+    overflow-y: visible;
+    height: 100%;
+}

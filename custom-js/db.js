@@ -14,6 +14,7 @@ export function loadFromDb(mapCallBack, listCallBack) {
             restaurants.set(doc.data()["name"], doc.data());
         });
     });
+
     transaction.finally(function () {
             mapCallBack(restaurants);
             listCallBack(restaurants);

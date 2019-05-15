@@ -3,11 +3,15 @@
 <html>
 <head>
     <link rel="stylesheet" href="custom-css/maps.css">
+    <link rel="stylesheet" href="custom-css/dialogs.css">
+
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+
     <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+
     <script src="custom-components/placeElementWidget.js"></script>
     <script src="scripts.js"></script>
     <script type="module" src="custom-js/apiKeysModule.mjs"></script>
@@ -25,8 +29,9 @@
 
     <div id="map"></div>
 
-    <ons-list-header onclick="event.preventDefault(); event.stopPropagation(); return false;">Recomendados</ons-list-header>
-    <div style="height: 52%; overflow-y: scroll;">
+    <ons-list-header onclick="event.preventDefault(); event.stopPropagation(); return false;">Recomendados
+    </ons-list-header>
+    <div style="height: 55%; overflow-y: scroll;">
         <ons-list id="mainList">
         </ons-list>
     </div>
@@ -36,9 +41,12 @@
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABbw9mp2XYDuV1IR4oPbj0Zu3xLmnpDgI&callback=initMap">
 </script>
+
 <script type="module">
-    import { loadFromDb } from './custom-js/db.js';
+    import {loadFromDb} from './custom-js/db.js';
+
     loadFromDb(initMarkers, loadList);
 </script>
+
 </body>
 </html>
